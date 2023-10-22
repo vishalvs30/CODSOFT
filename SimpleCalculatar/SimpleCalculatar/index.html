@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cal.css">
+    <title>Simple Calculater</title>
+</head>
+<body>
+    <div class="container">
+        <div class="calculater">
+            <form class="form1">
+
+                <!-- display the result -->
+
+                    <div class="displays">
+                        <input type="text" name="displays" />
+                    </div>
+                    
+                    <!-- Simple keys and its functionality -->
+
+                    <div>
+                        <input type="button" value="AC" onclick="displays.value = '' ">
+                        <input type="button" value="DE" onclick="displays.value = displays.value.toString().slice(0,-1) ">  <!--delete button funtionality-->
+                        <input type="button" value="." onclick="displays.value += '.' ">
+                        <input type="button" value="/" onclick="displays.value += '/' ">
+                    </div>
+                    <div>
+                        <input type="button" value="7" onclick="displays.value += '7' ">
+                        <input type="button" value="8" onclick="displays.value += '8' ">
+                        <input type="button" value="9" onclick="displays.value += '9' ">
+                        <input type="button" value="+" onclick="displays.value += '+' ">
+                    </div>
+                    <div>
+                        <input type="button" value="4" onclick="displays.value += '4' ">
+                        <input type="button" value="5" onclick="displays.value += '5' ">
+                        <input type="button" value="6" onclick="displays.value += '6' ">
+                        <input type="button" value="-" onclick="displays.value += '-' ">
+                    </div>
+                    <div>
+                        <input type="button" value="1" onclick="displays.value += '1' ">
+                        <input type="button" value="2" onclick="displays.value += '2' ">
+                        <input type="button" value="3" onclick="displays.value += '3' ">
+                        <input type="button" value="*" onclick="displays.value += '*' ">
+                    </div>
+                    <div>
+                        <input type="button" value="00" onclick="displays.value += '00' ">
+                        <input type="button" value="0" onclick="displays.value += '0' ">
+                        <input type="button" value="=" class="equal" onclick="displays.value = eval(displays.value) ">  <!--Calculate the value by inbuilt function eval()-->
+                    </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
